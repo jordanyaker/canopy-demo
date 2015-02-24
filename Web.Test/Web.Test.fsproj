@@ -54,13 +54,24 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
-    <Compile Include="Program.fs" />
     <None Include="App.config" />
     <Content Include="packages.config" />
+    <Compile Include="Configurations.fs" />
+    <Compile Include="PagesHelpers.fs" />
+    <Compile Include="PagesSuite.fs" />
+    <Compile Include="LoginHelpers.fs" />
+    <Compile Include="LoginSuite.fs" />
+    <Compile Include="RegistrationHelpers.fs" />
+    <Compile Include="RegistrationSuite.fs" />
+    <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="canopy">
       <HintPath>..\packages\canopy.0.9.21\lib\canopy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Faker">
+      <HintPath>..\packages\Faker.1.2\lib\Faker.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.Core">
